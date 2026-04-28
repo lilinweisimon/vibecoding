@@ -1,0 +1,26 @@
+appId: com.bilinote.app
+productName: BiliNote
+directories:
+  buildResources: resources
+  output: dist
+files:
+  - out/**/*
+  - resources/**/*
+win:
+  target:
+    - nsis
+  icon: resources/icon.ico
+nsis:
+  oneClick: false
+  allowToChangeInstallationDirectory: true
+  installerIcon: resources/icon.ico
+  uninstallerIcon: resources/icon.ico
+  installerHeaderIcon: resources/icon.ico
+linux:
+  target:
+    - AppImage
+  icon: resources/icon.png
+mac:
+  target:
+    - dmg
+  icon: resources/icon.png
