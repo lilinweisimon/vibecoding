@@ -20,7 +20,7 @@ jobs:
           ELECTRON_MIRROR: https://npmmirror.com/mirrors/electron/
           ELECTRON_BUILDER_BINARIES_MIRROR: https://npmmirror.com/mirrors/electron-builder-binaries/
 
-      - run: npm run dist
+      - run: npm run dist -- --publish never
         env:
           ELECTRON_MIRROR: https://npmmirror.com/mirrors/electron/
           ELECTRON_BUILDER_BINARIES_MIRROR: https://npmmirror.com/mirrors/electron-builder-binaries/
@@ -41,7 +41,7 @@ jobs:
 
       - run: npm ci
 
-      - run: npm run dist
+      - run: npm run dist -- --publish never
 
       - uses: actions/upload-artifact@v4
         with:
@@ -59,7 +59,7 @@ jobs:
 
       - run: npm ci
 
-      - run: npm run dist
+      - run: npm run dist -- --publish never
 
       - uses: actions/upload-artifact@v4
         with:
